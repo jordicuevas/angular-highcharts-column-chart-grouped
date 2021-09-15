@@ -14,64 +14,93 @@ export class AppComponent {
   ngOnInit() {
     this.gaugeNoFormat = new Chart({
       chart: {
-        type: 'column'
-    },
-
-    title: {
-        text: 'Matriz BCG'
-    },
-
-    xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Grapes' ]
-    },
-
-    yAxis: {
-        allowDecimals: false,
-        min: 0,
-        title: {
-            text: 'Ventas'
-        }
-    },
-
-    tooltip: {
-        formatter: function () {
-           return '<b>' + this.x + '</b><br/>' +
-                this.series.name + ': ' + this.y + '<br/>'  
-                
-        }
-    },
-
+        renderTo: 'container',
+        defaultSeriesType: 'scatter',
+        zoomType: 'xy',
+        height: 400
     
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+          min:0,
+        max:256,
+        tickInterval:16, //de cuanto en cuanto aumenta el eje de las x
+        plotLines:[{
+            value:128, // donde se centra la linea vertical
+            color:'#666',
+            dashStyle: 'solid',
+            width:2,
+            zIndex: 5
+        }],
+        labels:{
+            enabled: true
+            },        
+        gridLineWidth:1,
+        showLastLabel:true,
+        showFirstLabel:false,
+        lineColor:'#ccc',
+        lineWidth:1,
+        startOnTick: true,
+        endOnTick: true
+    },
+    yAxis: {
+          min:0,
+        max:256,
+                plotLines:[{
+            value:128,
+            dashStyle: 'solid',
+            color:'#666',
+            width:2,
+            zIndex: 5
+        }],
+        labels:{
+            enabled: true
+            },
+        tickInterval :16,
+        gridLineWidth:1,
+        showLastLabel:true,
+        showFirstLabel:false,
+        lineColor:'#ccc'
+    },
+    
+    plotOptions: {
+        scatter: {
+            marker: {
+                radius: 30,               
+                symbol: 'circle'
+             
+            },
+            tooltip: {              
+                enabled:true
+            },
 
-    series: [{
-        name: 'John',
-        data: [5, 3, 4, 7  ],
-         
-    }, {
-        name: 'Joe',
-        data: [3, 4, 4, 2 ],
-         
-    }, {
-        name: 'Jane',
-        data: [2, 5, 6, 2 ],
-       
-    }, {
-        name: 'Janet',
-        data: [3, 0, 4, 4 ],
-        
-    }]
-    });
+        },
+        series:{
+            animation :  false,
+            shadow: false,
+            enableMouseTracking: false
+        }
+    },
+    series: [
+      {
+         name: 'mantequilla mavesa',
+         color: 'rgba(225, 225, 225)',
+         data: [ [215.0,168.0]] 
+      },
+      {
+        name: 'mayonesa mavesa',
+        color: 'rgba(225,150, 225)',
+        data: [ [15.0,30.0]] 
+     }
+  ]
 
    
 
      
-  }
+  })
+}
 }
 
-export function centeredGaugeFormatter(): number | string {
-  return Math.abs((this.y - 50) * 2);
-}
-
-export function centeredGaugeNoFormatter(): number | string {
-  return Math.abs(this.y);
-}
+ 
