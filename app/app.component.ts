@@ -43,33 +43,35 @@ export class AppComponent {
           point: {
               xAxis: 0,
               yAxis: 0,
-              x: 140,
+              x: 135,
               y: 244
           },
           borderColor:'',
           backgroundColor:'rgba(255,255,255,0.5)',
-
-          text: 'Interrogante'
+          useHTML: true,
+          text: ' <img src="https://image.flaticon.com/icons/png/512/42/42994.png" width="40px">'
       }, {
           point: {
               xAxis: 0,
               yAxis: 0,
               x: 136,
-              y:96
+              y:70
           },
-          backgroundColor:'rgba(255,255,255,0.5)',
+          backgroundColor:'rgba(255,255,255,0)',
           borderColor:'',
-          text: 'Perro'
+          useHTML: true,
+          text: ' <img src="https://www.freeiconspng.com/thumbs/dog-icon/dog-icon-4.png" width="50px">'
       }, {
         point: {
             xAxis: 0,
             yAxis: 0,
             x: 4,
-            y: 96
+            y:70
         },
-        backgroundColor:'rgba(255,255,255,0.5)',
+        backgroundColor:'rgba(255,255,255,0 )',
         borderColor:'',
-        text: 'Vaca'
+        useHTML: true,
+          text: ' <img src="https://cdn-icons-png.flaticon.com/512/2911/2911315.png" width="50px">'
     }]
  
   }],
