@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartModule, HIGHCHARTS_MODULES } from 'angular-highcharts';
+import { ChartModule, HIGHCHARTS_MODULES    } from 'angular-highcharts';
 import more from 'highcharts/highcharts-more.src';
 import solidGauge from 'highcharts/modules/solid-gauge.src';
 import { AppComponent } from './app.component';
-
+import  annotations  from 'highcharts/modules/annotations'
 export function highchartsModules() {
   // apply Highcharts Modules to this array
-  return [more, solidGauge];
+  return [more, solidGauge, annotations];
 }
 
 
 @NgModule({
-  imports: [BrowserModule, ChartModule],
+  imports: [BrowserModule, ChartModule,  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [

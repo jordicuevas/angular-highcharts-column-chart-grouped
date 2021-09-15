@@ -1,8 +1,7 @@
 import { Component } from "@angular/core";
 import { Chart } from "angular-highcharts";
 import stylesCss from "../styles.css";
-import * as AnnotationsModule from "angular-highcharts"
-
+ 
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html"
@@ -19,7 +18,7 @@ export class AppComponent {
       chart: {
         renderTo: 'container',
         defaultSeriesType: 'scatter',
-        zoomType: 'xy',
+        zoomType: ' ',
         height: 400
     
     },
@@ -27,33 +26,51 @@ export class AppComponent {
         text: ''
     },
     annotations: [  {
-      draggable: '',
+      draggable: true,
+      
       labels: [{
           point: {
               xAxis: 0,
               yAxis: 0,
-              x: 101.44,
-              y: 1026
+              x: 5,
+              y: 245
           },
-          x: -30,
-          text: 'Col de la Joux'
+          backgroundColor:'rgba(255,255,255,0.5)',
+          borderColor:'',
+          x: -0,
+          text: 'Estrella'
       }, {
           point: {
               xAxis: 0,
               yAxis: 0,
-              x: 138.5,
-              y: 748
+              x: 140,
+              y: 244
           },
-          text: 'Côte de Viry'
+          borderColor:'',
+          backgroundColor:'rgba(255,255,255,0.5)',
+
+          text: 'Interrogante'
       }, {
           point: {
               xAxis: 0,
               yAxis: 0,
-              x: 176.4,
-              y: 1202
+              x: 136,
+              y:96
           },
-          text: 'Montée de la Combe <br>de Laisia Les Molunes'
-      }]
+          backgroundColor:'rgba(255,255,255,0.5)',
+          borderColor:'',
+          text: 'Perro'
+      }, {
+        point: {
+            xAxis: 0,
+            yAxis: 0,
+            x: 4,
+            y: 96
+        },
+        backgroundColor:'rgba(255,255,255,0.5)',
+        borderColor:'',
+        text: 'Vaca'
+    }]
  
   }],
     xAxis: {

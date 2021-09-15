@@ -8,6 +8,7 @@
     "@angular/core": "^7.0.1",
     "@angular/platform-browser": "^7.0.1",
     "@angular/platform-browser-dynamic": "^7.0.1",
+    "@types/highcharts": "^7.0.0",
     "angular-highcharts": "^7.0.1",
     "core-js": "^2.5.7",
     "highcharts": "^6.2.0",
