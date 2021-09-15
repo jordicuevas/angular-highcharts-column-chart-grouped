@@ -1,17 +1,20 @@
 import { Component } from "@angular/core";
 import { Chart } from "angular-highcharts";
 import stylesCss from "../styles.css";
+import * as AnnotationsModule from "angular-highcharts"
 
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html"
 })
 export class AppComponent {
+ 
   gauge: Chart;
   gaugeNoFormat: Chart;
   gaugeInline: Chart;
-
+ 
   ngOnInit() {
+ 
     this.gaugeNoFormat = new Chart({
       chart: {
         renderTo: 'container',
@@ -23,6 +26,36 @@ export class AppComponent {
     title: {
         text: ''
     },
+    annotations: [  {
+      draggable: '',
+      labels: [{
+          point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 101.44,
+              y: 1026
+          },
+          x: -30,
+          text: 'Col de la Joux'
+      }, {
+          point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 138.5,
+              y: 748
+          },
+          text: 'Côte de Viry'
+      }, {
+          point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 176.4,
+              y: 1202
+          },
+          text: 'Montée de la Combe <br>de Laisia Les Molunes'
+      }]
+ 
+  }],
     xAxis: {
           min:0,
         max:256,
