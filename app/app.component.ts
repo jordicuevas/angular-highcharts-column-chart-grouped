@@ -38,7 +38,8 @@ export class AppComponent {
           backgroundColor:'rgba(255,255,255,0.5)',
           borderColor:'',
           x: -0,
-          text: 'Estrella'
+          useHTML: true,
+          text: ' <img src="https://storage.needpix.com/rsynced_images/star-602148_1280.png" width="40px">'
       }, {
           point: {
               xAxis: 0,
@@ -146,6 +147,23 @@ export class AppComponent {
         color: 'rgba(225,150, 225)',
         data: [ [15.0,30.0]] 
      }
+     ,
+      {
+        name: 'Aceite Coposa',
+        color: 'rgba(135,174, 225)',
+        data: [ [48.0,224.0]] 
+     } ,
+     {
+       name: 'Pasta mary',
+       color: 'rgba(135,78, 225)',
+       data: [ [96.0,64.0]] 
+    }
+    ,
+     {
+       name: 'Harina Pan',
+       color: 'rgba(15,78, 225)',
+       data: [ [208.0,64.0]] 
+    }
   ]
 
    
