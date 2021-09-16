@@ -94,6 +94,7 @@ export class AppComponent {
         showLastLabel:true,
         showFirstLabel:false,
         lineColor:'#ccc',
+ 
         lineWidth:1,
         startOnTick: true,
         endOnTick: true
@@ -140,18 +141,30 @@ export class AppComponent {
       {
          name: 'mantequilla mavesa',
          color: 'rgba(225, 225, 225)',
-         data: [ [215.0,168.0]] 
+         data: [ [215.0,168.0]], 
+         marker: {
+          radius: 5,               
+          symbol: 'circle'
+         } 
       },
       {
         name: 'mayonesa mavesa',
         color: 'rgba(225,150, 225)',
-        data: [ [15.0,30.0]] 
+        data: [ [15.0,30.0]] ,
+        marker: {
+          radius: 20,               
+          symbol: 'circle'
+         } 
      }
      ,
       {
         name: 'Aceite Coposa',
         color: 'rgba(135,174, 225)',
-        data: [ [48.0,224.0]] 
+        data: [ [48.0,224.0]] ,
+        marker: {
+          radius: 20,               
+          symbol: 'circle'
+         } 
      } ,
      {
        name: 'Pasta mary',
